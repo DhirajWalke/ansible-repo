@@ -1,5 +1,6 @@
 name: install packages
 hosta: all
+become: yes
 tasks: 
   - name: install package
     yum: 
