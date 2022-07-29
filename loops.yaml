@@ -1,26 +1,13 @@
-- name: install packages
-  hosta: all
-  become: yes
-  tasks: 
-    - name: install package
-      yum: 
-        states: present
-        name: packer to be installed {{item}}
-      loop:
-        - httpd
-        - tree
-        - vim
-        - java  
-
-# - name: loops in ansible
-#   hosts: all
-#   tasks:
-#     - name: task in ansible
-#       debug:
-#         msg: list ofcities {{item}}
-#       loop:
-#         - nagpur
-#         - mumbai
-#         - pune
-#         - banglore
-#         - wardha
+name: install packages
+hosts: all
+become: yes
+tasks: 
+  - name: install package
+    yum:
+      state: present
+      name: {{item}}
+    loop:
+      - httpd
+      - tree
+      - vim
+      - java  
