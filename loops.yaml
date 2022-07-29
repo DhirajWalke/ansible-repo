@@ -5,7 +5,7 @@
     - name: install package
       yum: 
         states: present
-        name: {{item}}
+        name: packer to be installed {{item}}
       loop:
         - httpd
         - tree
