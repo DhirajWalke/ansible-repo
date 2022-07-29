@@ -1,0 +1,12 @@
+name: install packages
+hosta: all
+tasks: 
+  - name: install package
+    yum: 
+      states: present
+      name: {{iyem}}
+    loop:
+      - httpd
+      - tree
+      - vim
+      - java  
