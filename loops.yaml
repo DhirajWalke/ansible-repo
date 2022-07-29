@@ -5,7 +5,7 @@ tasks:
   - name: install package
     yum:
       state: present
-      name: "{{item}}"
+      name: {{item}}
     loop:
       - httpd
       - tree
